@@ -10,7 +10,7 @@ import { SiteArcheoService } from '../services/site-archeo.service';
 })
 export class FormSiteArcheologiqueComponent implements OnInit {
   siteArcheologique:SiteArcheologique=new SiteArcheologique();
-  constructor(private s :SiteArcheoService,private router:Router) { }
+  constructor(private s :SiteArcheoService , private router:Router) { }
 
   ngOnInit(): void {
   }
