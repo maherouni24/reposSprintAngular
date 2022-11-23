@@ -1,0 +1,20 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <h3 class="title">{{title}} :</h3>
+    <div class="row">
+        <div class="col" *ngFor="let s of listSitesArcheologiques">
+            <div class="card" style="width: 35rem">
+                <img src="../../assets/images/img.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{s.nomS}}</h5>
+                    <p class="card-text"><strong>Gouvernorat : </strong>{{s.gouvernoratS}}</p>
+                    <button >Like</button>
+                </div>
+
+            </div>
+
+        </div>

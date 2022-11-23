@@ -1,0 +1,30 @@
+<br>
+<br>
+<br>
+<br>
+<div class="form-center">
+ <form name="form" #form="ngForm">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Nom :</label>
+        <input type="text" class="form-control" name="nomS" [(ngModel)]="siteArcheologique.nomS" #nomS="ngModel" required >
+      <div *ngIf="nomS.touched && nomS.invalid">
+        <div *ngIf="nomS.errors !['required']">name is required</div>  
+      </div>
+    </div>
+    <div class="mb-2">
+        <label for="exampleFormControlInput1" class="form-label">Gouvernorat :</label>
+        <input type="text" class="form-control" name="gouvernoratS" [(ngModel)]="siteArcheologique.gouvernoratS" #gouvernoratS="ngModel" required >
+        <div *ngIf="gouvernoratS.touched && gouvernoratS.invalid">
+        <div *ngIf="gouvernoratS.errors !['required']">gouvernorat is required</div>  
+      </div>
+    </div>
+    <div class="mb-2">
+        <label for="exampleFormControlInput1" class="form-label">User Id :</label>
+        <input type="number" class="form-control" name="userId" [(ngModel)]="siteArcheologique.userId" #userId="ngModel" required >
+        <div *ngIf="userId.touched && userId.invalid">
+        <div *ngIf="userId.errors !['required']">User Id is required</div>  
+      </div>
+    </div>
+      <button type="submit" class="btn btn-success" (click)="ajoutSite()" [disabled]="form.invalid">ADD</button>
+ </form> 
+</div>    
