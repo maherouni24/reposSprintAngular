@@ -10,6 +10,7 @@ import { SiteArcheoService } from '../services/site-archeo.service';
 })
 export class FormSiteArcheologiqueComponent implements OnInit {
   siteArcheologique:SiteArcheologique=new SiteArcheologique();
+  listSitesArcheologiques: any;
   constructor(private s :SiteArcheoService , private router:Router) { }
 
   ngOnInit(): void {
@@ -21,5 +22,17 @@ export class FormSiteArcheologiqueComponent implements OnInit {
       ()=>this.router.navigate(['sitearcheologique'] )
     );
     alert("site ajouté")
+  }
+  deleteSite(id:number){
+    this.s.removeSiteArcheo(id).subscribe(
+      ()=>this.router.navigate(['sitearcheologique'])
+      );
+    alert("site supprimé")
+  }
+  updateSite(id:number,s: any){
+    this.s.updateSiteArcheo(s.id,s).subscribe(
+      ()=> this.router.navigate(['sitearcheologique'] )
+      );
+    alert("site modifié")
   }
 }

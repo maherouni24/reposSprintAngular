@@ -16,6 +16,10 @@ import { ListSiteArcheologiqueComponent } from './core/gestionSite/form-site-arc
 import { HeaderComponent } from './shared/header/header.component';
 import { StatistiqueComponent } from './core/statistiques/statistique/statistique.component';
 import { FormSiteArcheologiqueComponent } from './core/gestionSite/form-site-archeologique/form-site-archeologique.component';
+import { FormVisiteComponent } from './core/gestionVisite/formVisite/form-visite/form-visite.component';
+import { ListVisiteComponent } from './core/gestionVisite/ListVisite/list-visite/list-visite.component';
+import { PostComponent } from './core/gestionPost/formPost/post/post.component';
+import { ListPostComponent } from './core/gestionPost/ListPost/list-post/list-post.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,10 @@ import { FormSiteArcheologiqueComponent } from './core/gestionSite/form-site-arc
     HeaderComponent,
     StatistiqueComponent,
     FormSiteArcheologiqueComponent,
+    FormVisiteComponent,
+    ListVisiteComponent,
+    PostComponent,
+    ListPostComponent,
     
   ],
   imports: [

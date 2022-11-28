@@ -1,0 +1,13 @@
+<div class="form-center">
+    <form name="form" #form="ngForm">
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Publications :</label>
+            <textarea class="form-control" name="content" [(ngModel)]="post.content" placeholder="Quoi de neuf ?" rows="3" #content="ngModel" required></textarea>
+            <div *ngIf="content.touched && content.invalid">
+                <div *ngIf="content.errors !['required']">content is required</div>  
+            </div>
+          </div>
+          
+        <button type="submit" class="btn btn-info" (click)="ajoutPost()" [disabled]="form.invalid">publier</button>
+    </form> 
+</div>

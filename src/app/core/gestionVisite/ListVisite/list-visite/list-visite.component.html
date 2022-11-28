@@ -1,0 +1,17 @@
+<div class="container">
+    <h3 class="title">{{title}} :</h3>
+    <div class="row">
+        <div class="col" *ngFor="let v of ListVisites">
+            <div class="card" style="width: 75rem">
+                <img src="../../assets/img/im.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Visite</h5>
+                    <p class="card-text"><strong>Date : </strong>{{v.dateV}}</p>
+                    <p class="card-text"><strong>Nombre de personne : </strong>{{v.nbPersonne}}</p>
+                    <button type="button" class="btn btn-outline-success" (click)="like(v)">Like</button><p>{{v.like}}</p>
+                    <button type="button" class="btn btn-outline-danger" (click)="dislike(v)">Dislike</button><p>{{v.dislike}}</p>
+                </div>
+
+            </div>
+
+        </div>

@@ -1,9 +1,12 @@
-<br>
-<br>
-<br>
-<br>
 <div class="form-center">
  <form name="form" #form="ngForm">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Id :</label>
+    <input type="text" class="form-control" name="id" [(ngModel)]="siteArcheologique.id" #id="ngModel" required >
+    <div *ngIf="id.touched && id.invalid">
+      <div *ngIf="id.errors !['required']">id is required</div>  
+    </div>
+  </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Nom :</label>
         <input type="text" class="form-control" name="nomS" [(ngModel)]="siteArcheologique.nomS" #nomS="ngModel" required >
@@ -26,5 +29,7 @@
       </div>
     </div>
       <button type="submit" class="btn btn-success" (click)="ajoutSite()" [disabled]="form.invalid">ADD</button>
+      <button type="submit" class="btn btn-success" (click)="updateSite(siteArcheologique.id,siteArcheologique)" [disabled]="form.invalid">Update</button>
+      <button class="btn btn-success" (click)="deleteSite(siteArcheologique.id)" [disabled]="id.invalid">Delete</button>
  </form> 
 </div>    

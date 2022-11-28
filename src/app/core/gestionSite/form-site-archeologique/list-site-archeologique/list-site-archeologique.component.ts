@@ -21,10 +21,15 @@ export class ListSiteArcheologiqueComponent implements OnInit {
       }
      );
   }
-  //like(id: number) {
-    //this.listSitesArcheologiques.map((s) => {
-      //return s.id === id && s.like++;
-    //})
-  //}
+  like(s: any) {
+    s.like++;
+    this.s.updateSiteArcheo(s.id,s).subscribe(()=>{
+    })  
+  }
+  dislike(s: any) {
+    s.dislike++;
+    this.s.updateSiteArcheo(s.id,s).subscribe(()=>{
+    })  
+  }
 
 }
