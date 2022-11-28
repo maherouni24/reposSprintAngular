@@ -21,7 +21,7 @@ body{
   /* custom styles */
   body {
     padding: 4em;
-    background-color:aqua;
+    background-color:#fff;
     font: 13px/1.4 Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
   }
   label {

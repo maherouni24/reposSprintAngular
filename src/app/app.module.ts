@@ -18,6 +18,7 @@ import { DefilePhotosComponent } from './shared/defile-photos/defile-photos.comp
 import { FormReservationComponent } from './form-reservation/form-reservation.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { AddReclamComponent } from './core/add-reclam/add-reclam.component';
+import { MeteoComponent } from './meteo/meteo.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { AddReclamComponent } from './core/add-reclam/add-reclam.component';
     FormReservationComponent,
     SidebarComponent,
     AddReclamComponent,
+    MeteoComponent,
     
     
   ],
