@@ -4,5 +4,7 @@ export class Post{
     content!:string;
     attachement!: string;
     status!: string;
+    like!:number;
+    dislike!:number;
     userId!:number;
    }

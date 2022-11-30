@@ -1,20 +1,29 @@
 <div class="container">
     <div class="row">
         <div class="col" *ngFor="let p of listPosts">
-            <div class="card" style="width: 75rem">
+            <div class="blockquote mb-3" style="width: 68rem">
                 <div class="card-body">
-                    <h5 class="card-title" hidden>{{p.id}}</h5>
-                    <p class="card-text"><strong></strong>{{p.content}}</p>
+                    <div class="dropdown" style="width: 133rem">
+                        <h5 class="card-title" hidden>{{p.id}}</h5>    
+                        <button class="btn btn-light btn-sm" data-bs-toggle="dropdown" ><img src="../../assets/img/point.png"></button>
+                        <ul class="dropdown-menu">
+                          <li><button type="button" class="btn btn-light btn-sm" (click)="supprimerPost(p.id)"><img src="../../assets/img/delete.png">supprimer</button></li>
+                          <li><button type="button" class="btn btn-light btn-sm"><img src="../../assets/img/edit.png" (click)="modifierPost(p.id)">modifier</button></li>
+                        </ul>
+                    </div>
+                    <p class="card-text"><strong></strong>{{p.content}}</p>   
                 </div>
             </div>
-            <button type="button" class="btn btn-secondary btn-sm">❤Like</button>
-            <button type="button" class="btn btn-secondary btn-sm" (click)="afficherCommentPost(p.id)">commenter</button>
+            <button type="button" class="btn btn-light btn-sm" (click)="ajouterLikePost(p)" ><img src="../../assets/img/like.png"></button>{{p.like}}
+            <button type="button" class="btn btn-light btn-sm" (click)="ajouterDislikePost(p.id)"><img src="../../assets/img/dislike.png"></button>{{p.dislike}}
+            <button type="button" class="btn btn-light btn-sm" (click)="afficherCommentPost(p.id)"><img src="../../assets/img/comment.png">commenter</button>
+            <br>
             <form class="col" *ngFor="let cp of listCommentPosts">
-                <h6 class="card-text"><strong></strong>{{cp.content}}</h6>
+                <span class="d-sm-block p-2 text-bg-dark">{{cp.content}}</span>
             </form>
             <div class="input-group mb-3">
-<input type="text" class="form-control" placeholder="Votre commentaire..." name="content" [(ngModel)]="commentpost.content">
-                <button class="btn btn-outline-secondary" type="button" (click)="ajoutCommentPost(p.id)">►</button>  
+                <input type="text" class="form-control" placeholder="Votre commentaire..." name="content" [(ngModel)]="commentpost.content">
+                <button class="btn btn-light btn-sm" type="button" (click)="ajoutCommentPost(p.id)"><img src="../../assets/img/sendcomment.png"></button>  
             </div>
         </div>
     </div>

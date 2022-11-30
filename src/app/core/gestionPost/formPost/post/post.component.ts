@@ -18,6 +18,8 @@ export class PostComponent implements OnInit {
     this.post.status="active";
     this.post.titre="";
     this.post.attachement="";
+    this.post.like=0;
+    this.post.dislike=0;
     this.post.userId=1;
     this.p.addPost(this.post).subscribe(
       ()=>this.router.navigate(['posts'] )

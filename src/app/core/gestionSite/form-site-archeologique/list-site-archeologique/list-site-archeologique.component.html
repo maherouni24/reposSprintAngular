@@ -7,8 +7,8 @@
                 <div class="card-body">
                     <h5 class="card-title">Site Archéologique : {{s.nomS}}</h5>
                     <p class="card-text"><strong>Gouvernorat : </strong>{{s.gouvernoratS}}</p>
-                    <button type="button" class="btn btn-outline-success" (click)="like(s)">Like </button><p>{{s.like}}</p>
-                    <button type="button" class="btn btn-outline-danger" (click)="dislike(s)">Dislike</button><p>{{s.dislike}}</p>
+                    <button type="button" class="btn btn-light btn-sm" (click)="like(s)"><img src="../../assets/img/like.png"></button>{{s.like}}
+                    <button type="button" class="btn btn-light btn-sm" (click)="dislike(s)"><img src="../../assets/img/dislike.png"></button>{{s.dislike}}
                 </div>
 
             </div>

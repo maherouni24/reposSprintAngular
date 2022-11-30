@@ -1,35 +1,38 @@
 <div class="form-center">
+<fieldset>
+  <legend >Gestion Site site Archeologique :</legend> 
  <form name="form" #form="ngForm">
   <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Id :</label>
-    <input type="text" class="form-control" name="id" [(ngModel)]="siteArcheologique.id" #id="ngModel" required >
+    <span><label for="exampleFormControlInput1" class="form-label">Id :</label></span>
+    <input type="number" class="form-control" name="id" [(ngModel)]="siteArcheologique.id" #id="ngModel" required >
     <div *ngIf="id.touched && id.invalid">
       <div *ngIf="id.errors !['required']">id is required</div>  
     </div>
   </div>
     <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Nom :</label>
+      <span><label for="exampleFormControlInput1" class="form-label">Nom :</label></span>
         <input type="text" class="form-control" name="nomS" [(ngModel)]="siteArcheologique.nomS" #nomS="ngModel" required >
       <div *ngIf="nomS.touched && nomS.invalid">
         <div *ngIf="nomS.errors !['required']">name is required</div>  
       </div>
     </div>
     <div class="mb-2">
-        <label for="exampleFormControlInput1" class="form-label">Gouvernorat :</label>
+        <span><label for="exampleFormControlInput1" class="form-label">Gouvernorat :</label></span>
         <input type="text" class="form-control" name="gouvernoratS" [(ngModel)]="siteArcheologique.gouvernoratS" #gouvernoratS="ngModel" required >
         <div *ngIf="gouvernoratS.touched && gouvernoratS.invalid">
         <div *ngIf="gouvernoratS.errors !['required']">gouvernorat is required</div>  
       </div>
     </div>
     <div class="mb-2">
-        <label for="exampleFormControlInput1" class="form-label">User Id :</label>
+    <span><label for="exampleFormControlInput1" class="form-label">User Id :</label></span>
         <input type="number" class="form-control" name="userId" [(ngModel)]="siteArcheologique.userId" #userId="ngModel" required >
         <div *ngIf="userId.touched && userId.invalid">
         <div *ngIf="userId.errors !['required']">User Id is required</div>  
       </div>
     </div>
-      <button type="submit" class="btn btn-success" (click)="ajoutSite()" [disabled]="form.invalid">ADD</button>
-      <button type="submit" class="btn btn-success" (click)="updateSite(siteArcheologique.id,siteArcheologique)" [disabled]="form.invalid">Update</button>
-      <button class="btn btn-success" (click)="deleteSite(siteArcheologique.id)" [disabled]="id.invalid">Delete</button>
+      <button type="submit" class="btn btn-light btn-sm" (click)="ajoutSite()" [disabled]="form.invalid"><img src="../../assets/img/create.png">ADD</button>
+      <button type="submit" class="btn btn-light btn-sm" (click)="updateSite(siteArcheologique.id,siteArcheologique)" [disabled]="form.invalid"><img src="../../assets/img/edit.png">Update</button>
+      <button class="btn btn-light btn-sm" (click)="deleteSite(siteArcheologique.id)" [disabled]="id.invalid"><img src="../../assets/img/delete.png">Delete</button>
  </form> 
+</fieldset> 
 </div>    

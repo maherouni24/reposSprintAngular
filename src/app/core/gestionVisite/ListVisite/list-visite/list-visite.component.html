@@ -3,13 +3,15 @@
     <div class="row">
         <div class="col" *ngFor="let v of ListVisites">
             <div class="card" style="width: 75rem">
-                <img src="../../assets/img/im.jpg" class="card-img-top" alt="...">
+                <img src="../../assets/img/visite3.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Visite</h5>
+                    <h5 class="card-title" hidden>{{v.id}}</h5>
                     <p class="card-text"><strong>Date : </strong>{{v.dateV}}</p>
                     <p class="card-text"><strong>Nombre de personne : </strong>{{v.nbPersonne}}</p>
-                    <button type="button" class="btn btn-outline-success" (click)="like(v)">Like</button><p>{{v.like}}</p>
-                    <button type="button" class="btn btn-outline-danger" (click)="dislike(v)">Dislike</button><p>{{v.dislike}}</p>
+                    <button type="button" class="btn btn-light btn-sm" (click)="like(v)"><img src="../../assets/img/like.png"></button>{{v.like}}
+                    <button type="button" class="btn btn-light btn-sm" (click)="dislike(v)"><img src="../../assets/img/dislike.png"></button>{{v.dislike}}
+                    <button type="button" class="btn btn-light btn-sm" (click)="ajoutParticipation(v.id)"><img src="../../assets/img/interesse.png">Intéressé(e)</button>
                 </div>
 
             </div>

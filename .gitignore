@@ -6,10 +6,12 @@
 /out-tsc
 /bazel-out
 
-# Node
+# Nodesrc/app/core/gestionVisite/formVisite/
 /node_modules
 npm-debug.log
 yarn-error.log
+
+/src/app/core/gestionVisite/formVisite/
 
 # IDEs and editors
 .idea/
@@ -41,4 +43,3 @@ testem.log
 .DS_Store
 Thumbs.db
 
-/src/app/core/gestionVisite/formVisite/

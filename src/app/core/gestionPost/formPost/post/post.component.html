@@ -1,13 +1,14 @@
 <div class="form-center">
+  <fieldset>
+    <legend >Publication :</legend> 
     <form name="form" #form="ngForm">
           <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Publications :</label>
-            <textarea class="form-control" name="content" [(ngModel)]="post.content" placeholder="Quoi de neuf ?" rows="3" #content="ngModel" required></textarea>
+            <span><textarea class="form-control" name="content" [(ngModel)]="post.content" placeholder="Quoi de neuf ?" rows="3" #content="ngModel" required></textarea></span>
             <div *ngIf="content.touched && content.invalid">
                 <div *ngIf="content.errors !['required']">content is required</div>  
             </div>
-          </div>
-          
-        <button type="submit" class="btn btn-info" (click)="ajoutPost()" [disabled]="form.invalid">publier</button>
+          </div>          
+        <button type="submit" class="btn btn-light btn-sm" (click)="ajoutPost()" [disabled]="form.invalid"><img src="../../assets/img/create.png">publier</button>
     </form> 
+  </fieldset> 
 </div>
