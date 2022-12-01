@@ -3,6 +3,8 @@
 body{
     line-height: 1.5;
     font-family: 'Poppins', sans-serif;
+   
+    
 }
 
 *{
@@ -11,9 +13,10 @@ body{
     box-sizing: border-box;
 }
 .container{
-    max-width: 1170px;
+    max-width: auto;
     
     margin: auto;
+    
 
 }
 ul{
@@ -22,6 +25,7 @@ ul{
 .footer{
     background-color:  #24262b;
     padding: 70px 0;
+    margin-left:auto;
 }
 .footer-col{
     width: 25%;

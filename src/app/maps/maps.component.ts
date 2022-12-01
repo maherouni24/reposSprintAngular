@@ -18,7 +18,7 @@ export class MapsComponent implements OnInit {
     loader.load().then(() =>{
       loader.load().then(() => {
          new google.maps.Map(document.getElementById("map") as HTMLElement, {
-          center: { lat: 33.886917, lng: 9.537499 },
+          center: { lat: 35.04028, lng: 9.49361 },
           zoom: 10,
         });
       });

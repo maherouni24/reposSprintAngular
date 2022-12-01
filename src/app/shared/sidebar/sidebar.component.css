@@ -1,8 +1,14 @@
 #sidebar{
-    background-color: #eeb700;
-    width: 300px;
     
-
+    background-color:aqua;
+    width: 300px;
+    margin-top: auto;
+    
+    
+    
+}
+#side{
+   margin-left: 300px;
     
    
 }

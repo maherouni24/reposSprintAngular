@@ -1,7 +1,11 @@
 
-body{
-    background-color: #3a07c5;
-    margin-left: 300px;
+#body{
+    background-color:goldenrod;
+   
+    margin-top: 75px;
+    float:none;
+    
+   
 }
 
 #NameSite{

@@ -1,0 +1,30 @@
+
+<div class="container">
+    <div class="col-md-3" *ngFor="let p of rec;let i=index ">
+    <header class="jumbotron">
+      <h1>
+        Reclamation
+      </h1>
+    </header>
+    <p>
+      <!--<strong>{{ currentUser.accessToken.substring(0, 20) }} ...
+        {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}</strong>
+      -->
+    </p>
+    <p>
+    <strong>object:</strong>
+    {{p.object | json }}
+  </p>
+    <p>
+      <strong>message:</strong>
+      {{p.message | json }}
+    </p>
+    <p>
+    <strong>date d'envoyer:</strong>
+        {{p.createdAt| json }}
+    </p>
+    <button (click)="tarite(p)">Traité</button>
+   </div>
+   
+</div>
+ 
