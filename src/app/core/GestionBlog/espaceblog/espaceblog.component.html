@@ -31,9 +31,29 @@
      
       
       <button (click)="like(p.id)">Like</button>
-
+      <button class="btn btn-success" (click)="update()">
+        update
+      </button>
+      <br>
+      <br>
+      <button
+      class="btn btn-primary"
+      type="submit"
+      (click)="commentaire(p.id)"
+    >
+      Commentaire
+    </button>
+<br>
+<input
+type="text"
+class="form-control"
+id="exampleFormControlInput1"
+placeholder="Commentaire"
+[(ngModel)]="form.decription"
+decription="ngModel"
+/>
    </div>
-
+  
   </div>
  
   

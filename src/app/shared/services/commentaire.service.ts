@@ -22,9 +22,14 @@ const httpOptions = {
 })
 export class CommentaireService {
 
-  constructor(private http: HttpClient) { }
-  addblog(decription: string,b:Blog): Observable<any> {
-    return this.http.post(AUTH_API + 'blog/comment/' +username+'/'+b.id, {
-      decription}, httpOptions);
+  constructor(private http: HttpClient) {}
+  addcomment(decription: string, id: number): Observable<any> {
+    return this.http.post(
+      AUTH_API + 'blog/comment/' + username + '/' + id,
+      {
+        decription,
+      },
+      httpOptions
+    );
   }
 }

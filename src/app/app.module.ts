@@ -30,6 +30,7 @@ import { UpdateBlogComponent } from './core/GestionBlog/update-blog/update-blog.
     EspaceblogComponent,
     CommentaireComponent,
     UpdateBlogComponent,
+   
     
   ],
   imports: [
