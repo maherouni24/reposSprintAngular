@@ -1,0 +1,28 @@
+
+
+<div class="form-center">
+  <form>
+<img
+id="profile-img"
+src="https://thumbs.dreamstime.com/b/blog-information-website-concept-workplace-background-text-view-above-127465079.jpg"
+class="profile-img-card"
+/>
+<br>
+<br>
+
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label" for="Titre" >Titre</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="titre" [(ngModel)]="form.Titre" #Titre="ngModel">  
+      </div>
+   
+    <div class="mb-2">
+      <label  class="form-label">description</label>
+      <textarea type="text" class="form-control" id="exampleFormControlTextarea1" [(ngModel)]="form.decription" #decription="ngModel" rows="3"></textarea>
+    
+    </div>
+  
+  <button class="btn btn-success" (click)="onSubmit()">
+    save
+  </button>
+</form> 
+</div>

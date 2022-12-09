@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FooterComponent } from './footer.component';
+import { EspaceblogComponent } from './espaceblog.component';
 
-describe('FooterComponent', () => {
-  let component: FooterComponent;
-  let fixture: ComponentFixture<FooterComponent>;
+describe('EspaceblogComponent', () => {
+  let component: EspaceblogComponent;
+  let fixture: ComponentFixture<EspaceblogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FooterComponent ]
+      declarations: [ EspaceblogComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FooterComponent);
+    fixture = TestBed.createComponent(EspaceblogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

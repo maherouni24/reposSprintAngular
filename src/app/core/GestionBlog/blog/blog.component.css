@@ -1,0 +1,9 @@
+#profile-img{
+    width: auto;
+    height: 200px;
+    
+}
+.form-center{
+    display: flex;
+    justify-content: center;
+}
